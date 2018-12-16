@@ -1,1 +1,1 @@
-# trajectory planing using model predictive control
+# This project describes trajectory planning using model predictive control
