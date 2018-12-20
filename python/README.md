@@ -1,5 +1,14 @@
 # Python implementation
-This folder contains a python implementation of the trajectory planing concept.     
+This folder presents a python implementation of the trajectory planing concept.     
+# Recommended tools
+The follow tools are needed to run the implemented example:
+- [x] CASADI-package 
+python version of the package can be downloaded or cloned form [GitHub Pages](https://github.com/casadi/casadi/tree/master/docs). No need to inatll it.
+- [x] Python 3
+- [x] IpOpt
+non-lineare and non convexe problems solver. It needs to be installed as explained [here](https://www.coin-or.org/Ipopt/documentation/node10.html)
+
+
 
 
 # ###################Voraussetzung###############
