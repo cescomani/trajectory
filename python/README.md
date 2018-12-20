@@ -1,3 +1,7 @@
+# Python implementation
+This folder contains a python implementation of the trajectory planing concept.     
+
+
 # ###################Voraussetzung###############
 # CASADI-paket
 
