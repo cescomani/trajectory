@@ -7,21 +7,21 @@ python version of the package can be downloaded or cloned from [GitHub Pages](ht
 - [x] Python 3:
 - [x] IpOpt:
 non-lineare and non convexe problems solver. It needs to be installed as explained [here](https://www.coin-or.org/Ipopt/documentation/node10.html)
-# ###################Main.py################
-# With this script one can perform an example of lane keeping stuation using the the implemented MPC.
+## ###################Main.py################
+## With this script one can perform an example of lane keeping stuation using the the implemented MPC.
 
-##################mpc.py#############################
-# This script designs the model predictive control
+## ################mpc.py#############################
+## This script designs the model predictive control
 
-# ################road.py############################
-# Implements the used coordinate transformation, rotation matrix, manages the reference path and implements the dynamic 
-# optimization.
+## ################road.py############################
+## Implements the used coordinate transformation, rotation matrix, manages the reference path and implements the dynamic 
+## optimization.
 
-# ###############obstacle.py#######################
-# It designs obstacles as rectangle and implements the methode of dynamic programming 
+## ###############obstacle.py#######################
+## It designs obstacles as rectangle and implements the methode of dynamic programming 
 
-# ##############Fahrstrecke##############################
-# Design of a test track consisting of several sections in which different tracking movements can be performed(Lane keeping). 
+## ##############Fahrstrecke##############################
+## Design of a test track consisting of several sections in which different tracking movements can be performed(Lane keeping). 
 
-# ##############run the main script##################################
-# >> python3 main.py
+## ##############run the main script##################################
+## >> python3 main.py
