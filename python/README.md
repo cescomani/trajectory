@@ -7,7 +7,7 @@ python version of the package can be downloaded or cloned from [GitHub Pages](ht
 - [x] Python 3:
 - [x] IpOpt:
 non-lineare and non convexe problems solver. It needs to be installed as explained [here](https://www.coin-or.org/Ipopt/documentation/node10.html)
-## ###################Main.py################
+## ###################main.py################
 ### With this script one can perform an example of lane keeping situation using the implemented MPC.
 
 ## ################mpc.py#############################
@@ -20,7 +20,7 @@ non-lineare and non convexe problems solver. It needs to be installed as explain
 ## ###############obstacle.py#######################
 ### It designs obstacles as rectangle
 
-## ##############Fahrstrecke##############################
+## ##############fahrstrecke##############################
 ### Design of a test track consisting of several sections in which different tracking movements can be performed(Lane keeping). 
 
 ## ##############run the main script##################################
