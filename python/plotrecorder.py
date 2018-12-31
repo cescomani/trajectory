@@ -11,7 +11,8 @@ makeRecord = True
 
 def save_frame(folder):
     """
-    Save a frame for movie
+    Save frames in sequencial manner
+    @param: folder is the folder where frames are stored  
     """
     if makeRecord:
        global iframe
@@ -31,10 +32,13 @@ def save_movie(fname, d_pause):
 
 def save_movie_as_mp4(folder):
     """
-    Save 
+    Save sequencially named frames as mp4 video. 
+    @param: folder is the folder where frames are stored 
     """	
     if makeRecord:
+       # convert all frames with vps=25(Video per seconde) in mp4 and delete all stored frames
        cmd = "rm -f demo.mp4 && ffmpeg -i image%04d.png -c:v libx264 -pix_fmt yuv420p demo.mp4 && rm image*.png"
+       # move to cwd and run cmd in a new pipe as shell command
        P=Popen(cmd, cwd=folder, stderr=PIPE, shell=True)
        P.wait()
        P.terminate()

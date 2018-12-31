@@ -50,7 +50,7 @@ nHin = len(hin) #Anzahl von relevanten Hindernisse
 solver, varlb, varub, conlb, conub, varguess, var, integrierer=optimierer(Q_mpc, R_mpc, T_mpc, q, N_mpc, ord_mpc, Cdim, 0, vmax, M=1)
 
 # Anfangsbedingungen
-Nsim = 50#890     
+Nsim = 890     
 tsoll = 0.1  # 
 tSolver  = 0.1
 eT = 0
