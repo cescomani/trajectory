@@ -13,7 +13,7 @@ from plotrecorder import *
 # Parameter definieren 
 Nx = 5                              #Anzahl Zustände 
 Nu = 2                              #Anzahl Stellgröße
-ord_mpc = 4                         # Ordnung des Polynomes(Referenz)  
+ord_mpc = 3                         # Ordnung des Polynomes(Referenz)  
 T_mpc = 3                           # jede Planung dauert 3s(Zeithorizont)
 N_mpc = 15                          # Stellhorizont bzw. Prädiktionshorizont(Anzahl von Knotenvariablen)
 Q_mpc = np.diag([10,10, 1, 50, 10, 0]) # Nicht mit der Q-Matrix in der Ausarbeitung vertauchen
@@ -50,7 +50,7 @@ nHin = len(hin) #Anzahl von relevanten Hindernisse
 solver, varlb, varub, conlb, conub, varguess, var, integrierer=optimierer(Q_mpc, R_mpc, T_mpc, q, N_mpc, ord_mpc, Cdim, 0, vmax, M=1)
 
 # Anfangsbedingungen
-Nsim = 890    
+Nsim = 50#890     
 tsoll = 0.1  # 
 tSolver  = 0.1
 eT = 0
@@ -92,6 +92,8 @@ plt.axis("equal")  # Gleiche Auflösung auf beiden Achsen
 plt.grid()
 
 ursp_alt = 0 #Alter Ursprung von SK 
+
+#makeRecord = False
 for t in range( Nsim ):   
     # Straßenkoordinate festlegen. SK liegt in ursp und wird um theta bezüglich WK gederht
     # mapX ist der aktuelle Streckenabschnitt und obstList eine Liste aller Hindernisse auf diesem Abschnitt
@@ -194,11 +196,12 @@ for t in range( Nsim ):
     speedCarAx.set_text('v:'+'{:.3}'.format(str(X[t,3]) ))
     obsAx.set_position( (X[t,0]-2, X[t,1]+2) )
     obsAx.set_text('obst:'+'{:.3}'.format(str(nHin) ))
-       
-
-    plt.pause(0.05);
-   
-plt.show()
+    	
+    plt.pause(0.002);
+    #assert makeRecord==True, "makeRecord is set to False"   
+    save_frame("example")      
+plt.show(block=False)
+save_movie_as_mp4("example")
 
 
 
