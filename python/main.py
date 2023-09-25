@@ -1,21 +1,17 @@
 import time
 from pylab import *
+from sys import path
+path.append("source/")
+
 #import matplotlib.pyplot as plt
-from road import *
-import obstacle as hinder
-from mpc import *
-from fahrstrecke import *
-from plotrecorder import *
+from source.road.road import *
+import source.obstacle.obstacle as hinder
+from source.mpc.mpc import *
+from source.road.fahrstrecke import *
+from source.recorder.plotrecorder import *
 from konfigParameters import *
    
 ######################### Durchführung der MPC ###############################################
-
-Nx, Nu, ord_mpc, T_mpc, N_mpc, Q_mpc, R_mpc, q, vmax = systemInit()
-
-X0, Xref, temp2, temp3 = ReferenzTrajektorie()
-
-car, Cdim, obstList_wk = HindernisseModelieren(Xref)
-
 # Solver erzeugen
 hin = [] # Am Anfang wird kein Hindernis berücksichtigt
 nHin = len(hin) #Anzahl von relevanten Hindernisse
@@ -161,9 +157,9 @@ for t in range( Nsim ):
     	
     plt.pause(0.002);
     #assert makeRecord==True, "makeRecord is set to False"   
-    save_frame("example")      
+    save_frame(saveFramesIn)      
 plt.show(block=False)
-save_movie_as_mp4("example")
+save_movie_as_mp4(saveFramesIn)
 
 
 

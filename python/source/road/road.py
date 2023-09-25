@@ -1,6 +1,6 @@
 import numpy as np
 import scipy.integrate as integrator 
-from obstacle import *
+from source.obstacle.obstacle import *
 
       
 def abstand(p1,p2):
